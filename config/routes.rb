@@ -4,5 +4,8 @@ Rails.application.routes.draw do
 
   get "/subs", to: "subs#index"
 
-  resources :subs
+  resources :subs do
+    resources :topics 
+  end
+  
 end

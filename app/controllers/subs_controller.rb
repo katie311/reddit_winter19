@@ -27,7 +27,6 @@ class SubsController < ApplicationController
       redirect_to subs_path
     else
       render :new
-    end
   end
 
   def edit
@@ -50,6 +49,7 @@ class SubsController < ApplicationController
     #DELETE /subs/:id
     # @sub = Sub.find(params[:id])
     @sub.destroy
+    redirect_to subs_path
   end
 
 end
@@ -62,6 +62,6 @@ end
     def set_sub
       @sub = Sub.find(params[:id])
     end
-
+  end
 
 
